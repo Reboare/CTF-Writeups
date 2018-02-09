@@ -1,6 +1,6 @@
 The challenge was to create a solver for the 15puzzle.  My solution is implemented below along with a link to the algorithm used.
 
-```
+```python
 #https://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
 import re
 
