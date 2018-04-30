@@ -1,6 +1,17 @@
+'''
+OS Name:                   Microsoft Windows 7 Professional
+OS Version:                6.1.7601 Service Pack 1 Build 7601
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Windows User
+System Manufacturer:       VMware, Inc.
+System Model:              VMware Virtual Platform
+System Type:               x64-based PC
+'''
 #Log data, item 8
-# Address=0BADF00D
-# Message= - Pattern {Ld} (0x7D644C7B) found in cyclic pattern at position 26084
+#Address=0BADF00D
+#Message= - Pattern {Ld} (0x7D644C7B) found in cyclic pattern at position 26084
 
 #A test confirms EIP overwrite
 
